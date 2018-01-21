@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Calculations;
 
 /**
@@ -10,7 +5,12 @@ package Calculations;
  * @author user
  */
 public class Calculator extends javax.swing.JFrame {
-
+    
+    double firstnum;
+    double secondnum;
+    double result;
+    String operations;
+    
     /**
      * Creates new form Calculator
      */
