@@ -59,6 +59,11 @@ public class Calculator extends javax.swing.JFrame {
 
         jBtn1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jBtn1.setText("1");
+        jBtn1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtn1ActionPerformed(evt);
+            }
+        });
 
         jBtn2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jBtn2.setText("2");
@@ -226,6 +231,11 @@ public class Calculator extends javax.swing.JFrame {
     private void jBtn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtn3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jBtn3ActionPerformed
+
+    private void jBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtn1ActionPerformed
+        String Enternumber = jtxtDisplay.getText() + jBtn1.getText();
+        jtxtDisplay.setText(Enternumber);
+    }//GEN-LAST:event_jBtn1ActionPerformed
 
     /**
      * @param args the command line arguments
