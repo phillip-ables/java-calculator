@@ -147,6 +147,11 @@ public class Calculator extends javax.swing.JFrame {
 
         jBtnPlusMinus.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jBtnPlusMinus.setText("+/-");
+        jBtnPlusMinus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnPlusMinusActionPerformed(evt);
+            }
+        });
 
         jBtn0.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jBtn0.setText("0");
@@ -286,17 +291,18 @@ public class Calculator extends javax.swing.JFrame {
     }//GEN-LAST:event_jtxtDisplayActionPerformed
 
     private void jBtnPlusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnPlusActionPerformed
-        String Enternumber = jtxtDisplay.getText() + jBtnPlus.getText();
-        jtxtDisplay.setText(Enternumber);
+        firstnum = Double.parseDouble(jtxtDisplay.getText());
+        jtxtDisplay.setText("");
+        operations = "+";
     }//GEN-LAST:event_jBtnPlusActionPerformed
 
     private void jBtnCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnCActionPerformed
-        String Enternumber = jtxDisplay.getText() + jBtnC.getText();
-        jtxtDisplay.setText(Enternumber);
+        firstnum = 0;
+        jtxtDisplay.setText("0");
     }//GEN-LAST:event_jBtnCActionPerformed
 
     private void jBtn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtn3ActionPerformed
-        String Enternumber = jtxDisplay.getText() + jBtn3.getText();
+        String Enternumber = jtxtDisplay.getText() + jBtn3.getText();
         jtxtDisplay.setText(Enternumber);
     }//GEN-LAST:event_jBtn3ActionPerformed
 
@@ -351,23 +357,53 @@ public class Calculator extends javax.swing.JFrame {
     }//GEN-LAST:event_jBtn0ActionPerformed
 
     private void jBtnEqualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnEqualActionPerformed
-        String Enternumber = jtxtDisplay.getText() + jBtnEqual.getText();
-        jtxtDisplay.setText(Enternumber);
+        String answer;        
+        secondnum = Double.parseDouble(jtxtDisplay.getText());
+        if(operations == "+"){
+            result = firstnum + secondnum;
+            answer = String.format("%.Of", result);
+            jtxtDisplay.setText(answer);
+        }
+        if(operations == "-"){
+            result = firstnum - secondnum;
+            answer = String.format("%.Of", result);
+            jtxtDisplay.setText(answer);
+        }
+        if(operations == "/"){
+            result = firstnum / secondnum;
+            answer = String.format("%.Of", result);
+            jtxtDisplay.setText(answer);
+        }
+        if(operations == "X"){
+            result = firstnum * secondnum;
+            answer = String.format("%.Of", result);
+            jtxtDisplay.setText(answer);
+        }
     }//GEN-LAST:event_jBtnEqualActionPerformed
 
     private void jBtnMinusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnMinusActionPerformed
-        String Enternumber = jtxtDisplay.getText() + jBtnMinus.getText();
-        jtxtDisplay.setText(Enternumber);
+        firstnum = Double.parseDouble(jtxtDisplay.getText());
+        jtxtDisplay.setText("");
+        operations = "-";
     }//GEN-LAST:event_jBtnMinusActionPerformed
 
     private void jBtnDivideActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnDivideActionPerformed
-        String Enternumber = jtxtDisplay.getText() + jBtnDivide.getText();
-        jtxtDisplay.setText(Enternumber);
+        firstnum = Double.parseDouble(jtxtDisplay.getText());
+        jtxtDisplay.setText("");
+        operations = "/";
     }//GEN-LAST:event_jBtnDivideActionPerformed
 
     private void jBtnMultiplyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnMultiplyActionPerformed
-        // TODO add your handling code here:
+        firstnum = Double.parseDouble(jtxtDisplay.getText());
+        jtxtDisplay.setText("");
+        operations = "X";
     }//GEN-LAST:event_jBtnMultiplyActionPerformed
+
+    private void jBtnPlusMinusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnPlusMinusActionPerformed
+        double ops = Double.parseDouble(String.valueOf(jtxtDisplay.getText()));
+        ops = ops * (-1);
+        jtxtDisplay.setText(String.valueOf(ops));
+    }//GEN-LAST:event_jBtnPlusMinusActionPerformed
 
     /**
      * @param args the command line arguments
