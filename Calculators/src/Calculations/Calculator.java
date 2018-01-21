@@ -45,7 +45,7 @@ public class Calculator extends javax.swing.JFrame {
         jBtnPlus = new javax.swing.JButton();
         jBtnMultiply = new javax.swing.JButton();
         jBtnC = new javax.swing.JButton();
-        jBtn18 = new javax.swing.JButton();
+        jBtnEqual = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -67,6 +67,11 @@ public class Calculator extends javax.swing.JFrame {
 
         jBtn2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jBtn2.setText("2");
+        jBtn2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtn2ActionPerformed(evt);
+            }
+        });
 
         jBtn3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jBtn3.setText("3");
@@ -78,36 +83,86 @@ public class Calculator extends javax.swing.JFrame {
 
         jBtn4.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jBtn4.setText("4");
+        jBtn4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtn4ActionPerformed(evt);
+            }
+        });
 
         jBtn5.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jBtn5.setText("5");
+        jBtn5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtn5ActionPerformed(evt);
+            }
+        });
 
         jBtn6.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jBtn6.setText("6");
+        jBtn6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtn6ActionPerformed(evt);
+            }
+        });
 
         jBtn7.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jBtn7.setText("7");
+        jBtn7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtn7ActionPerformed(evt);
+            }
+        });
 
         jBtn8.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jBtn8.setText("8");
+        jBtn8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtn8ActionPerformed(evt);
+            }
+        });
 
         jBtn9.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jBtn9.setText("9");
+        jBtn9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtn9ActionPerformed(evt);
+            }
+        });
 
         jBtnDivide.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jBtnDivide.setText("/");
+        jBtnDivide.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnDivideActionPerformed(evt);
+            }
+        });
 
         jBtnDecimal.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jBtnDecimal.setText(".");
+        jBtnDecimal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnDecimalActionPerformed(evt);
+            }
+        });
 
         jBtnPlusMinus.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jBtnPlusMinus.setText("+/-");
 
         jBtn0.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jBtn0.setText("0");
+        jBtn0.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtn0ActionPerformed(evt);
+            }
+        });
 
         jBtnMinus.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jBtnMinus.setText("-");
+        jBtnMinus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnMinusActionPerformed(evt);
+            }
+        });
 
         jBtnPlus.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jBtnPlus.setText("+");
@@ -119,6 +174,11 @@ public class Calculator extends javax.swing.JFrame {
 
         jBtnMultiply.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jBtnMultiply.setText("X");
+        jBtnMultiply.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnMultiplyActionPerformed(evt);
+            }
+        });
 
         jBtnC.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jBtnC.setText("C");
@@ -128,8 +188,13 @@ public class Calculator extends javax.swing.JFrame {
             }
         });
 
-        jBtn18.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jBtn18.setText("=");
+        jBtnEqual.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jBtnEqual.setText("=");
+        jBtnEqual.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnEqualActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -168,7 +233,7 @@ public class Calculator extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jBtn0, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jBtn18, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jBtnEqual, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jBtnC, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -209,7 +274,7 @@ public class Calculator extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jBtnDecimal, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jBtn0, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jBtn18, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jBtnEqual, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -217,25 +282,92 @@ public class Calculator extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jtxtDisplayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxtDisplayActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jtxtDisplayActionPerformed
 
     private void jBtnPlusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnPlusActionPerformed
-        // TODO add your handling code here:
+        String Enternumber = jtxtDisplay.getText() + jBtnPlus.getText();
+        jtxtDisplay.setText(Enternumber);
     }//GEN-LAST:event_jBtnPlusActionPerformed
 
     private void jBtnCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnCActionPerformed
-        // TODO add your handling code here:
+        String Enternumber = jtxDisplay.getText() + jBtnC.getText();
+        jtxtDisplay.setText(Enternumber);
     }//GEN-LAST:event_jBtnCActionPerformed
 
     private void jBtn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtn3ActionPerformed
-        // TODO add your handling code here:
+        String Enternumber = jtxDisplay.getText() + jBtn3.getText();
+        jtxtDisplay.setText(Enternumber);
     }//GEN-LAST:event_jBtn3ActionPerformed
 
     private void jBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtn1ActionPerformed
         String Enternumber = jtxtDisplay.getText() + jBtn1.getText();
         jtxtDisplay.setText(Enternumber);
     }//GEN-LAST:event_jBtn1ActionPerformed
+
+    private void jBtn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtn2ActionPerformed
+        String Enternumber = jtxtDisplay.getText() + jBtn2.getText();
+        jtxtDisplay.setText(Enternumber);
+    }//GEN-LAST:event_jBtn2ActionPerformed
+
+    private void jBtn4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtn4ActionPerformed
+        String Enternumber = jtxtDisplay.getText() + jBtn4.getText();
+        jtxtDisplay.setText(Enternumber);
+    }//GEN-LAST:event_jBtn4ActionPerformed
+
+    private void jBtn5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtn5ActionPerformed
+        String Enternumber =  jtxtDisplay.getText() + jBtn5.getText();
+        jtxtDisplay.setText(Enternumber);
+    }//GEN-LAST:event_jBtn5ActionPerformed
+
+    private void jBtn6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtn6ActionPerformed
+        String Enternumber = jtxtDisplay.getText() + jBtn6.getText();
+        jtxtDisplay.setText(Enternumber);
+    }//GEN-LAST:event_jBtn6ActionPerformed
+
+    private void jBtn7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtn7ActionPerformed
+        String Enternumber = jtxtDisplay.getText() + jBtn7.getText();
+        jtxtDisplay.setText(Enternumber);
+    }//GEN-LAST:event_jBtn7ActionPerformed
+
+    private void jBtn8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtn8ActionPerformed
+        String Enternumber = jtxtDisplay.getText() + jBtn8.getText();
+        jtxtDisplay.setText(Enternumber);
+    }//GEN-LAST:event_jBtn8ActionPerformed
+
+    private void jBtn9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtn9ActionPerformed
+        String Enternumber = jtxtDisplay.getText() + jBtn9.getText();
+        jtxtDisplay.setText(Enternumber);
+    }//GEN-LAST:event_jBtn9ActionPerformed
+
+    private void jBtnDecimalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnDecimalActionPerformed
+        String Enternumber = jtxtDisplay.getText() + jBtnDecimal.getText();
+        jtxtDisplay.setText(Enternumber);
+    }//GEN-LAST:event_jBtnDecimalActionPerformed
+
+    private void jBtn0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtn0ActionPerformed
+        String Enternumber = jtxtDisplay.getText() + jBtn0.getText();
+        jtxtDisplay.setText(Enternumber);
+    }//GEN-LAST:event_jBtn0ActionPerformed
+
+    private void jBtnEqualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnEqualActionPerformed
+        String Enternumber = jtxtDisplay.getText() + jBtnEqual.getText();
+        jtxtDisplay.setText(Enternumber);
+    }//GEN-LAST:event_jBtnEqualActionPerformed
+
+    private void jBtnMinusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnMinusActionPerformed
+        String Enternumber = jtxtDisplay.getText() + jBtnMinus.getText();
+        jtxtDisplay.setText(Enternumber);
+    }//GEN-LAST:event_jBtnMinusActionPerformed
+
+    private void jBtnDivideActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnDivideActionPerformed
+        String Enternumber = jtxtDisplay.getText() + jBtnDivide.getText();
+        jtxtDisplay.setText(Enternumber);
+    }//GEN-LAST:event_jBtnDivideActionPerformed
+
+    private void jBtnMultiplyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnMultiplyActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBtnMultiplyActionPerformed
 
     /**
      * @param args the command line arguments
@@ -275,7 +407,6 @@ public class Calculator extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jBtn0;
     private javax.swing.JButton jBtn1;
-    private javax.swing.JButton jBtn18;
     private javax.swing.JButton jBtn2;
     private javax.swing.JButton jBtn3;
     private javax.swing.JButton jBtn4;
@@ -287,6 +418,7 @@ public class Calculator extends javax.swing.JFrame {
     private javax.swing.JButton jBtnC;
     private javax.swing.JButton jBtnDecimal;
     private javax.swing.JButton jBtnDivide;
+    private javax.swing.JButton jBtnEqual;
     private javax.swing.JButton jBtnMinus;
     private javax.swing.JButton jBtnMultiply;
     private javax.swing.JButton jBtnPlus;
